@@ -47,7 +47,7 @@
   }
   .nav-row{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;max-width:1180px;margin:0 auto;}
   .brand{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;letter-spacing:0.02em;}
-  .brand-logo{height:34px;width:auto;}
+  .brand-logo{height:52px;width:auto;}
   .footer-logo{height:40px;margin:0 auto 14px;}
   .hero-logo{height:56px;width:auto;margin-bottom:28px;animation:riseIn 1s ease-out both;}
   .wa-fab{
