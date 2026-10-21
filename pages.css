@@ -1,0 +1,76 @@
+/* Styles for the two new pages. Uses the design tokens in styles.css. Every class here is new and prefixed pg-. */
+.brand-home{display:flex;align-items:center;min-height:44px;flex-shrink:0;line-height:0;}
+.pg-hero{position:relative;overflow:hidden;padding:36px 0 56px;}
+.pg-hero-grid{display:grid;gap:34px;align-items:center;}
+.pg-hero .eyebrow{margin-bottom:18px;}
+.pg-hero h1{font-size:clamp(2.1rem,9vw,3.9rem);line-height:1.08;text-wrap:balance;max-width:16ch;}
+.pg-lede{margin-top:20px;max-width:46ch;font-size:1.05rem;line-height:1.65;color:var(--charcoal-soft);}
+.pg-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-top:30px;}
+.pg-photo{position:relative;width:100%;max-width:460px;margin:0 auto;}
+.pg-photo img{width:100%;height:auto;display:block;}
+@media(min-width:860px){.pg-hero{padding:72px 0 88px;}.pg-hero-grid{grid-template-columns:1fr 1fr;gap:64px;}.pg-hero h1{font-size:clamp(2.8rem,5vw,4.2rem);}}
+
+/* Page 1: soft, romantic */
+.pg-soft{background:linear-gradient(180deg,var(--beige) 0%,var(--ivory) 100%);}
+.pg-frame::before{content:"";position:absolute;inset:0;border:1px solid var(--gold);transform:translate(14px,14px);}
+.pg-frame img{position:relative;box-shadow:0 18px 44px rgba(31,31,31,0.14);}
+@media(min-width:860px){.pg-soft .pg-photo{order:-1;}}
+
+/* Page 2: dark, graphic */
+.pg-dark{background:var(--charcoal);color:var(--ivory);}
+.pg-dark h1{color:var(--ivory);}
+.pg-dark .pg-lede{color:#C9C2B6;}
+.pg-dark .eyebrow{color:var(--gold);}
+.pg-dark .btn-primary{background:var(--gold);color:var(--charcoal);}
+.pg-dark .btn-primary:hover{background:var(--ivory);}
+.pg-dark .btn-secondary{color:var(--ivory);border-bottom-color:var(--ivory);}
+.pg-dark .btn-secondary:hover{color:var(--gold);border-bottom-color:var(--gold);}
+.pg-dark :focus-visible{outline-color:var(--ivory);}
+.pg-dark .pg-photo{outline:1px solid rgba(198,161,110,0.6);outline-offset:12px;}
+
+/* personal-touch points (page 1) */
+.pg-points{display:grid;gap:30px;}
+@media(min-width:760px){.pg-points{grid-template-columns:repeat(3,1fr);gap:44px;}}
+.pg-point{border-top:1px solid var(--gold);padding-top:18px;}
+.pg-point h3{font-size:1.28rem;margin-bottom:8px;}
+.pg-point p{color:var(--charcoal-soft);font-size:0.95rem;}
+.pg-flavour-line{margin-top:48px;max-width:62ch;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem;line-height:1.55;}
+
+/* gallery: natural aspect ratios, nothing cropped */
+.pg-gallery{column-count:1;column-gap:22px;}
+@media(min-width:560px){.pg-gallery{column-count:2;}}
+@media(min-width:960px){.pg-gallery{column-count:3;}}
+.pg-item{break-inside:avoid;margin:0 0 24px;background:var(--ivory);border:1px solid var(--line);overflow:hidden;}
+.pg-item .pg-img{overflow:hidden;}
+.pg-item img{width:100%;height:auto;display:block;transition:transform .6s ease;}
+.pg-item:hover img{transform:scale(1.04);}
+.pg-item figcaption{padding:16px 18px 10px;border-top:1px solid var(--line);}
+.pg-cap{display:block;font-family:'Cormorant Garamond',serif;font-size:1.12rem;font-weight:600;}
+.pg-link{display:inline-flex;align-items:center;min-height:44px;font-size:0.8rem;letter-spacing:0.02em;color:var(--gold-text);border-bottom:1px solid transparent;transition:border-color .3s;}
+.pg-link:hover{border-bottom-color:var(--gold);}
+
+/* good to know (page 1) and journey (page 2) */
+.pg-split{display:grid;gap:36px;}
+@media(min-width:860px){.pg-split{grid-template-columns:1fr 1fr;gap:72px;align-items:start;}.pg-split .section-head{margin-bottom:0;}}
+.pg-checks{list-style:none;}
+.pg-checks li{position:relative;padding:16px 0 16px 28px;border-bottom:1px solid var(--line);color:var(--charcoal-soft);}
+.pg-checks li:first-child{border-top:1px solid var(--line);}
+.pg-checks li::before{content:"";position:absolute;left:4px;top:27px;width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.pg-checks strong{color:var(--charcoal);font-weight:600;}
+.pg-steps{list-style:none;display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);}
+@media(min-width:760px){.pg-steps{grid-template-columns:repeat(3,1fr);}}
+.pg-step{background:var(--ivory);padding:40px 30px;}
+.pg-step .big{display:block;font-family:'Cormorant Garamond',serif;font-size:3.2rem;line-height:1;color:var(--gold);margin-bottom:14px;}
+.pg-step h3{font-size:1.25rem;margin-bottom:8px;}
+.pg-step p{color:var(--charcoal-soft);font-size:0.95rem;}
+.pg-note{margin-top:30px;max-width:70ch;border-left:2px solid var(--gold);padding:4px 0 4px 18px;color:var(--charcoal-soft);font-size:0.92rem;}
+
+/* closing band additions (the band itself is the existing .reserve) */
+.reserve .pg-small{font-size:0.88rem;margin-top:16px;}
+.pg-chips{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin-top:22px;color:#C9C2B6;font-size:0.86rem;}
+.pg-chips li{position:relative;padding-left:14px;}
+.pg-chips li::before{content:"";position:absolute;left:0;top:0.65em;width:4px;height:4px;border-radius:50%;background:var(--gold);}
+.reserve h2{line-height:1.2;}
+.pg-note a{color:var(--charcoal);border-bottom:1px solid var(--gold);}
+.pg-note a:hover{color:var(--gold-text);}
+.pg-note + .pg-note{margin-top:16px;}
